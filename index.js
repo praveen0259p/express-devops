@@ -1,15 +1,6 @@
-const express = require('express');
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-// testing jenkins integration from github 1 webhooks  
-// testing jenkins integration from github 2 webhooks 
-// testing jenkins integration from github 3 webhooks 
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+require("dotenv").config();
+const app = require("./app");
+const PORT = process.env.PORT || 5000;
+app.listen(3000, () => {
+    console.log(`Server running on port ${PORT}`);
 });
