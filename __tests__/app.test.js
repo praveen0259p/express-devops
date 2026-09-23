@@ -11,6 +11,6 @@ describe("GET /", () => {
   test("should return correct message", async () => {
     const response = await request(app).get("/");
 
-    expect(response.text).toBe("Hello From Express Applicatin from app.js!");
+    expect(response.text).toBe("Hello From Express Applicatin from app1.js!");
   });
 });
