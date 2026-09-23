@@ -30,7 +30,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+                sh 'npm ci --include=dev'
             }
         }
 
