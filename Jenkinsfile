@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     environment {
         NODE_ENV = 'production'
         EC2_HOST = '3.110.167.229'
@@ -8,15 +7,12 @@ pipeline {
 
         PATH = "/Users/praveenkumar/.nvm/versions/node/v20.19.2/bin:${env.PATH}"
     }
-
     stages {
-
         stage('Checkout') {
             steps {
                 checkout scm
             }
         }
-
         stage('Check Node') {
             steps {
                 sh '''
